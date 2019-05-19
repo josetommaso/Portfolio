@@ -143,6 +143,10 @@ nav .navbar-toggler-icon {
   margin-bottom: 15px;
 }
 
+.portf .img-thumbnail {
+  height: 200px;
+}
+
 .portf .zoom {
   overflow: hidden;
   position: relative;
