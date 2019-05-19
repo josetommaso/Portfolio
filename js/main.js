@@ -1,14 +1,3 @@
-/* requirejs(["scrolltoanchor"], function (scrolltoanchor) {
-    $("a.nav-link").scrollToAnchor({
-        speed: 1500
-    });
-
-}); */
-
-
-
-
-
 
 $(document).ready(function () {
     window.onscroll = function () { scrollFunction() };
@@ -41,11 +30,11 @@ $(document).ready(function () {
     });
 
 
-    $('a[href="#modal"]').click(function (event) {
-        $(this).modal({
-            fadeDuration: 1000,
-        });
-    });
+    // $('a[href="#modal"]').click(function (event) {
+    //     $(this).modal({
+    //         fadeDuration: 1000,
+    //     });
+    // });
 
 
 
