@@ -1,3 +1,4 @@
+/***** Global Styles *****/
 .title {
   font-weight: bold;
   letter-spacing: 1px;
@@ -5,22 +6,13 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+/***** Header *****/
 .logo {
   width: 20px;
 }
 
-.modal {
-  height: auto;
-  width: auto;
-  padding: 50px;
-}
-
-.modal .close-modal {
-  top: 10px !important;
-  right: 10px !important;
-}
-
 nav {
+  background-color: rgba(0, 0, 0, 0.3);
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -48,6 +40,13 @@ nav .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
+@media (max-width: 633px) {
+  .navbar-brand {
+    margin: 3px 0;
+  }
+}
+
+/***** Hero *****/
 .hero {
   background-image: url("../img/HeroPhoto.jpg");
   max-width: 100% !important;
@@ -64,9 +63,22 @@ nav .navbar-toggler-icon {
   position: absolute;
   top: 50%;
   left: 50%;
+  margin: 50px 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: white;
+}
+
+.hero .fa-chevron-down {
+  font-size: 2.5em;
+  color: #eeeeee;
+  margin-top: 50px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.hero .fa-chevron-down:hover {
+  color: #fea411;
 }
 
 .hero h1 {
@@ -114,7 +126,7 @@ nav .navbar-toggler-icon {
 
 @media (max-width: 768px) {
   .hero-text {
-    font-size: 11px;
+    font-size: 15px;
   }
 }
 
@@ -124,6 +136,7 @@ nav .navbar-toggler-icon {
   }
 }
 
+/***** Portfolio *****/
 .portf {
   height: auto;
   background-color: #eeeeee;
@@ -163,28 +176,49 @@ nav .navbar-toggler-icon {
   transform: scale(1.1);
 }
 
-.about img {
-  width: 100%;
-  height: 350px;
-  border-radius: 0.2rem;
+.portf .modal-body {
+  width: auto;
+}
+
+.portf .modal-body img {
+  width: auto;
+  max-height: 350px;
+}
+
+.portf .modal-header .close {
+  margin: -10px;
   padding: 0;
 }
 
-.about h1 {
-  padding-bottom: 20px;
+/***** About *****/
+.about img {
+  min-height: 100%;
 }
 
-.about h1 span {
+.about .title-aboutme {
+  padding-bottom: 20px;
+  font-size: 2em;
+}
+
+.about .bottom-line {
+  width: 200px;
+  border-bottom: 7px solid #eeeeee;
+}
+
+.about .title span {
   color: #fea411;
 }
 
 .about .bg-color {
   background-color: #fea411;
+  padding: 20px;
 }
 
 .about p {
   font-family: 'Lato', sans-serif;
   line-height: 30px;
+  text-align: justify;
+  margin-top: 30px;
   padding: 0;
 }
 
@@ -200,6 +234,13 @@ nav .navbar-toggler-icon {
   }
 }
 
+@media (max-width: 400px) {
+  .about .row {
+    margin-bottom: 0 !important;
+  }
+}
+
+/***** Parallax *****/
 .parallax {
   background-image: url("../img/parallax2.jpg");
   height: 400px;
@@ -210,13 +251,14 @@ nav .navbar-toggler-icon {
   position: relative;
 }
 
-.parallax h2 {
+.parallax .text-parallax {
   color: white;
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 40%;
   text-align: center;
-  font-size: 3vw;
+  font-size: 2em;
   padding: 20px;
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.8);
@@ -226,6 +268,14 @@ nav .navbar-toggler-icon {
           transform: translate(-50%, -50%);
 }
 
+@media (max-width: 400px) {
+  .parallax .text-parallax {
+    font-size: 20px;
+    width: 70%;
+  }
+}
+
+/***** Contact *****/
 .contact h1 span {
   color: #fea411;
 }
@@ -240,8 +290,8 @@ nav .navbar-toggler-icon {
   font-size: 30px;
 }
 
-.contact ul .fa-facebook {
-  color: #3C5A99;
+.contact ul .fa-github {
+  color: #6e5494;
 }
 
 .contact ul img {
@@ -252,6 +302,7 @@ nav .navbar-toggler-icon {
   color: #0077b5;
 }
 
+/***** Footer *****/
 footer {
   background-color: #fea411;
   font-family: 'Lato', sans-serif;

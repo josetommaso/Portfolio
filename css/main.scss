@@ -1,6 +1,8 @@
 $primary-color: #fea411;
 
 
+/***** Global Styles *****/
+
 .title {
     font-weight: bold;
     letter-spacing: 1px;
@@ -9,28 +11,16 @@ $primary-color: #fea411;
     font-family: 'Ubuntu', sans-serif;
 }
 
+/***** Header *****/
+
 .logo {
     width: 20px;
 }
 
 
-.modal {
-    height: auto;
-    width: auto;
-    padding: 50px;
-    .close-modal {
-        top: 10px !important;
-        right: 10px !important;
-    }
-    img {
-        // height: 300px;
-        // width: 100%;
-    }
-}
-
 nav {
-    //background: rgb(0,0,0);
-    //background: linear-gradient(180deg, rgba(0,0,0,0.6979166666666667) 0%, rgba(0,0,0,0.020045518207282953) 100%);
+    background-color: rgba(0,0,0, 0.3);
+    
     transition: .5s;
     
     .navbar-brand {
@@ -60,8 +50,16 @@ nav {
         //border-color: rgb(255,255,255, 1) !important;
     }
 
-    
 }
+
+@media (max-width: 633px) {
+    .navbar-brand {
+        margin: 3px 0;
+    }
+}
+
+
+/***** Hero *****/
 
 .hero {
     
@@ -72,7 +70,6 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    //background-blend-mode: saturation;
     background-attachment: fixed;
 
     .hero-text {
@@ -80,9 +77,21 @@ nav {
         position: absolute;
         top: 50%;
         left: 50%;
+        margin: 50px 0;
         
         transform: translate(-50%, -50%);
         color: white;
+    }
+    
+    .fa-chevron-down {
+        font-size: 2.5em;
+        color: #eeeeee;
+        margin-top: 50px;
+        transition: .3s ease;
+    }
+    
+    .fa-chevron-down:hover {
+        color: #fea411;
     }
 
 
@@ -129,7 +138,7 @@ nav {
 @media (max-width: 768px) { 
 
     .hero-text {
-        font-size: 11px;
+        font-size: 15px;
     }
 }
 
@@ -139,6 +148,8 @@ nav {
     }
     
 }
+
+/***** Portfolio *****/
 
 .portf {
     height: auto;
@@ -184,23 +195,42 @@ nav {
         }
     }
     
+    
+    .modal-body {
+        width: auto;
+        img {
+            width: auto;
+            max-height: 350px;
+        }
+    }
+    
+    .modal-header {
+        .close {
+            margin: -10px;
+            padding: 0;
+        }
+    }
+    
 }
 
-.about {
-    
-    img {
-        width: 100%;
-        height: 350px;
-        // margin-top: 20px;
-        // margin-bottom: 30px;
-        border-radius: 0.2rem;
-        padding: 0;
-        
-    }
+/***** About *****/
 
-    h1 {
+.about {
+    img {
+        min-height: 100%;
+    }
+    
+    .title-aboutme {
         padding-bottom: 20px;
-        
+        font-size: 2em;
+    }
+    
+    .bottom-line {
+        width: 200px;
+        border-bottom: 7px solid #eeeeee;
+    }
+    
+    .title {
         span {
             color: $primary-color;
         }
@@ -208,13 +238,14 @@ nav {
     
     .bg-color {
         background-color: $primary-color;
+        padding: 20px;
     }
     
     p {
         font-family: 'Lato', sans-serif;
         line-height: 30px;
-        
-        //padding-bottom: 50px;
+        text-align: justify;
+        margin-top: 30px;
         padding: 0;
     }
 }
@@ -235,6 +266,19 @@ nav {
     }
 }
 
+@media (max-width: 400px) {
+    .about {
+        .row {
+            margin-bottom: 0 !important;
+        }
+    }
+    
+}
+
+
+/***** Parallax *****/
+
+
 .parallax {
     background-image: url("../img/parallax2.jpg");
     height: 400px;
@@ -244,13 +288,14 @@ nav {
     background-size: cover;
     position: relative;
 
-    h2 {
+    .text-parallax {
         color: white;
         position: absolute;
         left: 50%;
         top: 50%;
+        width: 40%;
         text-align: center;
-        font-size: 3vw;
+        font-size: 2em;
         padding: 20px;
         border-radius: 15px;
         background-color: rgba(0, 0, 0, 0.80);
@@ -260,6 +305,18 @@ nav {
         
     }
 }
+
+@media (max-width: 400px) {
+    .parallax {
+        .text-parallax {
+            font-size: 20px;
+            width: 70%;
+        }
+    }
+    
+}
+
+/***** Contact *****/
 
 .contact {
     h1 {
@@ -277,8 +334,8 @@ nav {
         padding-bottom: 20px;
         font-size: 30px;
 
-        .fa-facebook {
-            color: #3C5A99;
+        .fa-github {
+            color: #6e5494;
         }
 
         img {
@@ -289,6 +346,8 @@ nav {
             color: #0077b5;
         }
 }
+
+/***** Footer *****/
 
 footer {
     background-color: $primary-color;

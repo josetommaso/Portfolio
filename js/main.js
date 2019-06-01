@@ -1,5 +1,8 @@
 
 $(document).ready(function () {
+    
+    // 
+     
     window.onscroll = function () { scrollFunction() };
 
     function scrollFunction() {
@@ -7,37 +10,30 @@ $(document).ready(function () {
         if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
             navbar.style.padding = "5px 0px";
             navbar.style.background = "black";
-            navbar.classList.remove('py-3');
+            navbar.style.borderBottom = "2px solid rgba(254, 164, 17, 0.7)";
+            navbar.classList.remove('p-3');
             //document.getElementById("logo").style.fontSize = "25px";
 
         } else {
             navbar.style.padding = "20px 0px";
-            navbar.style.background = "none";
-            navbar.classList.add('py-3');
+            navbar.style.background = "rgba(0,0,0, 0.3)";
+            navbar.style.borderBottom = "none";
+            navbar.classList.add('p-3');
             //document.getElementById("logo").style.fontSize = "35px";
 
         }
     }
+    
 
-    $(".nav-link").click(function (e) {
+    $(".nav-link, .arrow-down").click(function (e) {
         e.preventDefault();
 
         var position = $($(this).attr("href")).offset().top;
 
         $("body, html").animate({
-            scrollTop: position
+            scrollTop: position - 50
         }, 700 /* speed */);
     });
-
-
-    // $('a[href="#modal"]').click(function (event) {
-    //     $(this).modal({
-    //         fadeDuration: 1000,
-    //     });
-    // });
-
-
-
 });
 
 
