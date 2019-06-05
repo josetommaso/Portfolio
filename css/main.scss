@@ -15,7 +15,7 @@ $primary-color: #fea411;
 /***** Header *****/
 
 .logo {
-    width: 20px;
+    width: 30px;
 }
 
 
@@ -155,6 +155,7 @@ nav {
 .portf {
     height: auto;
     background-color: #eeeeee;
+    padding-bottom: 20px;
 
     h1 {
 
@@ -175,6 +176,11 @@ nav {
     
     .img-thumbnail {
         height: 200px;
+        filter: grayscale(1);
+    }
+    
+    .img-thumbnail:hover {
+        filter: none;
     }
     
     .zoom {
@@ -230,7 +236,9 @@ nav {
     
     .title-aboutme {
         padding-bottom: 20px;
-        font-size: 2em;
+        font-size: 3em;
+        font-family: 'Anton', sans-serif;
+        // letter-spacing: 2px;
     }
     
     .bottom-line {
@@ -250,7 +258,7 @@ nav {
     }
     
     p {
-        font-family: 'Lato', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
         line-height: 30px;
         text-align: justify;
         margin-top: 30px;

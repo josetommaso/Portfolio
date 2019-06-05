@@ -8,7 +8,7 @@
 
 /***** Header *****/
 .logo {
-  width: 20px;
+  width: 30px;
 }
 
 nav {
@@ -140,6 +140,7 @@ nav .navbar-toggler-icon {
 .portf {
   height: auto;
   background-color: #eeeeee;
+  padding-bottom: 20px;
 }
 
 .portf h1 span {
@@ -158,6 +159,13 @@ nav .navbar-toggler-icon {
 
 .portf .img-thumbnail {
   height: 200px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.portf .img-thumbnail:hover {
+  -webkit-filter: none;
+          filter: none;
 }
 
 .portf .zoom {
@@ -205,7 +213,8 @@ nav .navbar-toggler-icon {
 
 .about .title-aboutme {
   padding-bottom: 20px;
-  font-size: 2em;
+  font-size: 3em;
+  font-family: 'Anton', sans-serif;
 }
 
 .about .bottom-line {
@@ -223,7 +232,7 @@ nav .navbar-toggler-icon {
 }
 
 .about p {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   line-height: 30px;
   text-align: justify;
   margin-top: 30px;
