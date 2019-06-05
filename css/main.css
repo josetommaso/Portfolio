@@ -264,7 +264,7 @@ nav .navbar-toggler-icon {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 40%;
+  width: 50%;
   text-align: center;
   font-size: 2em;
   padding: 20px;
@@ -276,7 +276,14 @@ nav .navbar-toggler-icon {
           transform: translate(-50%, -50%);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
+  .parallax .text-parallax {
+    font-size: 25px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
   .parallax .text-parallax {
     font-size: 20px;
     width: 70%;
