@@ -326,6 +326,15 @@ nav .navbar-toggler-icon {
   color: #0077b5;
 }
 
+.contact .email {
+  display: inline-block;
+  padding: 20px;
+  color: #000;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+}
+
 /***** Footer *****/
 footer {
   background-color: #fea411;
