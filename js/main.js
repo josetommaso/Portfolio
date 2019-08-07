@@ -1,7 +1,7 @@
   
-$(window).on('load', function(){
-    $('.loader').fadeOut();
-});
+// $(window).on('load', function(){
+//     $('.loader').fadeOut();
+// });
 
 
 
