@@ -321,7 +321,6 @@ nav .navbar-toggler-icon {
 
 .about .title-aboutme {
   padding-bottom: 20px;
-  font-size: 3em;
   font-family: 'Anton', sans-serif;
   color: #222629;
 }
@@ -349,22 +348,23 @@ nav .navbar-toggler-icon {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-@media (min-width: 576px) {
-  .about p {
-    font-size: 1em;
+@media (min-width: 1200px) {
+  .about .title-aboutme {
+    font-size: 2.5em !important;
+    font-weight: bold;
+  }
+  .about .about-text {
+    font-size: 1.4em !important;
+    line-height: 1.5em;
   }
 }
 
-@media (min-width: 768px) {
-  .about p {
-    font-size: 1.5em;
-    padding: 0 40px;
+@media (min-width: 300px) {
+  .about .title-aboutme {
+    font-size: 1.6em;
   }
-}
-
-@media (max-width: 400px) {
-  .about .row {
-    margin-bottom: 0 !important;
+  .about .about-text {
+    font-size: 1.2em;
   }
 }
 

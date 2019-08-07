@@ -367,7 +367,6 @@ nav {
     
     .title-aboutme {
         padding-bottom: 20px;
-        font-size: 3em;
         font-family: 'Anton', sans-serif;
         color: #222629;
     }
@@ -398,30 +397,30 @@ nav {
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1200px) {
     .about {
-        p {
-            font-size: 1em;
+        .title-aboutme {
+            font-size: 2.5em !important;
+            font-weight: bold;
+        }
+        .about-text {
+            font-size: 1.4em !important;
+            line-height: 1.5em;
         }
     }
 }
 
-@media (min-width: 768px) {
-    .about {
-        p {
-            font-size: 1.5em;
-            padding: 0 40px
-        }
-    }
-}
 
-@media (max-width: 400px) {
+@media (min-width: 300px) {
     .about {
-        .row {
-            margin-bottom: 0 !important;
+        .title-aboutme {
+            font-size: 1.6em;
+        }
+        
+        .about-text {
+            font-size: 1.2em;
         }
     }
-    
 }
 
 
