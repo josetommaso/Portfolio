@@ -8,18 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141356928-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-141356928-1');
-    </script>
-
-    <link href="https://fonts.googleapis.com/css?family=Anton|Lato|Ubuntu:400,400i,700,700i" rel="stylesheet">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Ubuntu:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="icon" href="img/favicon.ico">
@@ -27,8 +18,9 @@
     <title>Jose Tommaso - Portfolio</title>
 </head>
 
+
 <body>
-    <div class="se-pre-con"></div>
+    <div class="loader"></div>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top p-3" id="navbar">
         <div class="container">
             <a class="navbar-brand text-white font-weight-bold text-uppercase align-top" href="#">
@@ -54,19 +46,29 @@
             </div>
         </div>
     </nav>
-    <section class="hero fluid-container">
+    <section class="hero fluid-container" id="vanta-bg">
+        <div class="bg-color-text mx-auto"></div>
         <div class="hero-text text-white col-sm-12">
-            <h1 class="text-uppercase"><span class="text-center">jose</span> <br>t<img class="mb-3"
-                    src="img/logohero.png" alt="logohero">mmaso</h1>
+            <h1 class="text-uppercase text-center"><span class="firstname">jose </span>tommaso</h1>
             <p>Front-end Developer</p>
-            <a href="#portf" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
+        </div>
+        <ul class="list-inline languages">
+            <li class="list-inline-item"><img src="img/html5.png" alt=""></li>
+            <li class="list-inline-item"><img src="img/css-3.png" alt=""></li>
+            <li class="list-inline-item"><img src="img/javascript.png" alt=""></li>
+        </ul>
+        <div class="row arrow-down">
+            <div class="col-12">
+                <a class="arrow-down" href="#portf"><i class="fas fa-chevron-down"></i></a>
+            </div>
         </div>
     </section>
+    <div class="divider-portf"></div>
     <section class="portf" id="portf">
         <div class="container">
             <h1 class="title text-center">Port<span>f</span>olio</h1>
             <p class="text-center">Projects i have been working on</p>
-            <div class="row text-center">
+            <div class="row">
                 <div class="col-lg-4 col-md-6 col-xs-6 thumb">
                     <!-- Image trigger modal -->
                     <a class="thumbnail" href="#modal" data-toggle="modal" data-target="#exampleModalCenter">
@@ -140,7 +142,7 @@
                                 </button>
                                 </div>
                                 <div class="modal-body">
-                                    <div id="carouselSTL" class="carousel slide" data-ride="carousel">
+                                    <div id="carouselhamachi" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <img class="img-fluid" src="img/hamachi2.jpg" alt="image hamachi homepage 2">
@@ -155,11 +157,11 @@
                                                 <img class="img-fluid" src="img/hamachi5.jpg" alt="image hamachi homepage 5">
                                             </div>
                                         </div>
-                                        <a class="carousel-control-prev" href="#carouselSTL" role="button" data-slide="prev">
+                                        <a class="carousel-control-prev" href="#carouselhamachi" role="button" data-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Previous</span>
                                         </a>
-                                        <a class="carousel-control-next" href="#carouselSTL" role="button" data-slide="next">
+                                        <a class="carousel-control-next" href="#carouselhamachi" role="button" data-slide="next">
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Next</span>
                                         </a>
@@ -311,23 +313,30 @@
         </div>
     </section>
     <section class="about" id="about">
+    <div class="divider-about"></div>
         <div class="container">
-            <h1 class="title text-center">Abou<span>t</span> me!</h1>
-            <div class="row text-center mt-5 mb-5">
-                <div class="col-lg-3 col-md-4 col-sm-6 p-0">
-                    <img class="img-fluid" src="img/stickers-background-transp.png" alt="Avatar Picture">
-                </div>
+            <h1 class="title text-center">Abou<span>t</span> me</h1>
+            <div class="row text-center mt-5 boxshadow">
                 <div class="col-lg-9 col-md-8 col-sm-6 bg-color">
                     <h1 class="text-left mt-5 title-aboutme">Hey Jose here!</h1>
                     <div class="bottom-line"></div>
                     <p class="about-text">I'm a <span class="font-italic">self-taught</span> Front-end Developer from Venezuela currently living in Barcelona, Spain. I'm passionate about technology,
                      coding and e-learning. I am currently looking for a job as front-end developer to share my skills in HTML5, CSS3 and JavaScript.</p>
-                </div>        
+                </div>    
+                <div class="col-lg-3 col-md-4 col-sm-6 p-0 bg-picture">
+                    <img class="img-fluid" src="img/stickers-background-transp.png" alt="Avatar Picture">
+                </div>
             </div>
+            <div class="row mx-auto position-relative cv-button">
+                <div class="col-12">
+                        <a class="btn btn-primary text-uppercase" download href="download/Jose Tommaso CV.pdf" role="button">Download CV</a>
+                </div>
+            </div>   
         </div>
         </div>
     </section>
-    <section class="parallax col-12">
+    <section class="parallax col-12 position-relative">
+        <div class="divider-parallax"></div>
         <h3 class="text-parallax">“We learn from failure, not from success!”<br><br> <span class="font-italic">Bram Stoker</span></h3>
     </section>
     <section class="contact" id="contact">
@@ -352,20 +361,33 @@
     <footer class="container-fluid text-center">
         <div class="row">
             <div class="col-12 font-weight-bold">
-                <p class="pt-2 pb-0">copyright &copy; Jose Tommaso 2019</p>
+                <p class="">copyright &copy; Jose Tommaso 2019</p>
             </div>
         </div>
     </footer>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141356928-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    gtag('config', 'UA-141356928-1');
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script data-main="js/main" src="js/require.js"></script>
+        <script src="js/three.r92.min.js"></script>
+        <script src="js/vanta.net.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

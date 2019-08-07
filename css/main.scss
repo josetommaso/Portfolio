@@ -1,6 +1,38 @@
 // Color Variables
-$primary-color: #fea411;
+$darkgrey: rgba(34, 38, 41, .5);
+$lightgrey: #474B4F;
+$lightergrey: #6B6E70;
+$darkgreen: #61892F;
+$green: #86C232;
 
+/***** Loader *****/
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../img/loading.svg') 50% 50% no-repeat rgb(249,249,249);
+}
+
+
+.cv-button {
+    
+    a {
+        position: absolute;
+        top: -15px;
+        background-color: #2196F3;
+        border: none;
+    }
+    
+    a:hover {
+        background-color: rgb(27, 129, 212) !important;
+    }
+    
+    
+}
 
 /***** Global Styles *****/
 
@@ -8,8 +40,44 @@ $primary-color: #fea411;
     font-weight: bold;
     letter-spacing: 1px;
     padding-top: 50px;
-    //padding-bottom: 50px;
+    color: #fff;
     font-family: 'Ubuntu', sans-serif;
+    
+    span {
+        color: $green;
+    }
+}
+
+/***** DIVIDERS *****/
+
+.divider-portf,
+.divider-about,
+.divider-parallax {
+    position: absolute;
+    width: 100%;
+    
+}
+
+.divider-portf {
+    height: 100px;
+    clip-path: polygon(0% 0%, 50% 80%, 100% 0, 100% 100%, 0% 100%);
+    top: 750px;
+    background-color: $lightgrey;
+}
+
+.divider-about {
+    height: 100px;
+    clip-path: polygon(0% 0%, 50% 80%, 100% 0, 100% 100%, 0% 100%);
+    top: -100px;
+    background-color: $lightergrey;
+}
+
+.divider-parallax {
+    height: 150px;
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
+    top: -10px;
+    right: 0;
+    background-color: $lightergrey;
 }
 
 /***** Header *****/
@@ -20,8 +88,7 @@ $primary-color: #fea411;
 
 
 nav {
-    background-color: rgba(0,0,0, 0.3);
-    
+    background-color: $darkgrey;
     transition: .5s;
     
     .navbar-brand {
@@ -60,65 +127,84 @@ nav {
 }
 
 
+
 /***** Hero *****/
 
 .hero {
-    
-    background-image: url('../img/HeroPhoto.jpg');
+  
     max-width:100% !important;
     max-height:100% !important;
-    height: 100vh;
+    height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
-    .hero-text {
-        text-align: center;
+    
+    .bg-color-text {
         position: absolute;
+        transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
-        margin: 50px 0;
-        
+        width: 500px;
+        height: 250px;
+        background-color: rgba($color: $lightergrey, $alpha: .5);
+        border: 2px solid rgba($color: $lightergrey, $alpha: .8);
+    }
+    
+    .hero-text,
+    .languages,
+    .arrow-down {
         transform: translate(-50%, -50%);
+        position: absolute;
+    }
+    
+    .hero-text {
+        text-align: center;
+        top: 45%;
+        left: 50%;
+        margin: 50px 0;
         color: white;
+    }
+    
+    .languages {
+        top: 65%;
+        left: 50%;
+    }
+    
+    .languages li img {
+        width: 60px;
+        margin: 0 20px;
+    }
+    
+    .arrow-down {
+        top: 80%;
+        left: 50.5%;
     }
     
     .fa-chevron-down {
         font-size: 2.5em;
         color: #eeeeee;
-        margin-top: 50px;
         transition: .3s ease;
     }
     
+    
     .fa-chevron-down:hover {
-        color: $primary-color;
+        color: $green;
     }
 
 
     
     h1 {
-        letter-spacing: 8px;
+        letter-spacing: 5px;
         font-size: 5em;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Lato', sans-serif;
         font-weight: bold;
-        font-style: italic;
-
-        img {
-        
-            -webkit-animation: rotation 4s infinite linear;
-            width: 0.8em;
         
         
-            @keyframes rotation {
-                from {
-                        -webkit-transform: rotate(0deg);
-                }
-                to {
-                        -webkit-transform: rotate(359deg);
-                }
-            }
+        .firstname {
+            color: #94f908;
         }
+        
     }
 
     p {
@@ -126,26 +212,53 @@ nav {
         font-size: 1.5em;
         font-weight: 400;
     }
-
-
-}
-
-@media (max-width: 950px) {
-    .hero {
-        background-image: url('../img/HeroPhoto2.jpg');
+    
+    h1, p {
+        text-shadow: 0px 3px 3px rgba(0,0,0,0.8);
     }
+
 }
+
 
 @media (max-width: 768px) { 
 
     .hero-text {
-        font-size: 15px;
+        font-size: 11px;
     }
+    
+    .bg-color-text {
+        width: 400px !important;
+        
+    }
+    
+    .languages li img{
+        width: 50px !important;
+    }
+    
+    
 }
 
 @media (max-width: 576px) { 
     .hero-text {
-        font-size: 10px;
+        font-size: 7px;
+    }
+    
+    .bg-color-text {
+        width: 300px !important;
+        height: 250px;
+    }
+    
+    .languages li img{
+        width: 40px !important;
+        margin: 0 !important;
+    }
+    
+    .hero p {
+        font-size: 2.5em !important;
+    }
+    
+    .arrow-down {
+        left: 53% !important;
     }
     
 }
@@ -154,19 +267,16 @@ nav {
 
 .portf {
     height: auto;
-    background-color: #eeeeee;
-    padding-bottom: 20px;
+    background-color: $lightgrey;
+    color: #fff;
+    padding-top: 70px;
+    padding-bottom: 200px;
 
-    h1 {
-
-        span {
-            color: $primary-color;
-        }
-    }
 
     p {
-        font-style: italic;
         font-size: 20px;
+        margin-bottom: 50px;
+        font-family: 'Lato', sans-serif;
     }
     
     .thumb {
@@ -175,6 +285,9 @@ nav {
     }
     
     .img-thumbnail {
+        width: 100%;
+        border: none;
+        padding: 0;
         height: 200px;
         filter: grayscale(1);
     }
@@ -186,6 +299,10 @@ nav {
     .zoom {
         overflow: hidden;
         position: relative;
+        -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 4px;
         
         img {
             max-width: 100%;
@@ -230,15 +347,20 @@ nav {
 /***** About *****/
 
 .about {
+    position: relative;
+    padding-bottom: 150px;
+    padding-top: 50px;
+    background-color: $lightergrey;
     img {
         min-height: 100%;
+        background-color: #88d61b;
     }
     
     .title-aboutme {
         padding-bottom: 20px;
         font-size: 3em;
         font-family: 'Anton', sans-serif;
-        // letter-spacing: 2px;
+        color: #222629;
     }
     
     .bottom-line {
@@ -246,14 +368,9 @@ nav {
         border-bottom: 7px solid #eeeeee;
     }
     
-    .title {
-        span {
-            color: $primary-color;
-        }
-    }
     
     .bg-color {
-        background-color: $primary-color;
+        background-color: #88d61b;
         padding: 20px;
     }
     
@@ -263,6 +380,12 @@ nav {
         text-align: justify;
         margin-top: 30px;
         padding: 0;
+    }
+    
+    .boxshadow {
+        -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     }
 }
 
@@ -277,7 +400,8 @@ nav {
 @media (min-width: 768px) {
     .about {
         p {
-            font-size: 1.2em;
+            font-size: 1.5em;
+            padding: 0 40px
         }
     }
 }
@@ -296,8 +420,8 @@ nav {
 
 
 .parallax {
-    background-image: url("../img/parallax2.jpg");
-    height: 400px;
+    background-image: url("../img/parallax.jpg");
+    height: 600px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -305,7 +429,7 @@ nav {
     position: relative;
 
     .text-parallax {
-        color: white;
+        color: #1c1f22;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -313,8 +437,9 @@ nav {
         text-align: center;
         font-size: 2em;
         padding: 20px;
+        margin-top: 40px;
         border-radius: 15px;
-        background-color: rgba(0, 0, 0, 0.80);
+        background-color: rgba(255, 255, 255, 0.705);
         box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
         transform: translate(-50%, -50%);
 
@@ -343,12 +468,14 @@ nav {
 /***** Contact *****/
 
 .contact {
-    h1 {
-        span {
-            color: $primary-color;
-        }
+    background-color: #1c1f22;
+    
+    p {
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
     }
-
+    
     h3 {
         padding-top: 20px;
         padding-bottom: 20px; 
@@ -374,7 +501,7 @@ nav {
     .email {
         display: inline-block;
         padding: 20px;
-        color: #000;
+        color: $darkgreen;
         font-family: 'Ubuntu', sans-serif;
         letter-spacing: 1px;
         font-size: 1.5em;
@@ -384,12 +511,14 @@ nav {
 /***** Footer *****/
 
 footer {
-    background-color: $primary-color;
+    background-color: #1c1f22;
     font-family: 'Lato', sans-serif;
     font-size: 13px;
     
     p {
         height: 15px;
+        color: #eeeeee;
+        
     }
     
 }
