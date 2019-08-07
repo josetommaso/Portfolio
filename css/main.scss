@@ -159,7 +159,6 @@ nav {
     }
     
     .hero-text {
-        text-align: center;
         top: 45%;
         left: 50%;
         margin: 50px 0;
@@ -196,7 +195,7 @@ nav {
     
     h1 {
         letter-spacing: 5px;
-        font-size: 5em;
+        font-size: 4em;
         font-family: 'Lato', sans-serif;
         font-weight: bold;
         
@@ -209,8 +208,7 @@ nav {
 
     p {
         font-family: 'Ubuntu', sans-serif;
-        font-size: 1.5em;
-        font-weight: 400;
+        font-size: 1.3em;
     }
     
     h1, p {
@@ -219,9 +217,20 @@ nav {
 
 }
 
+@media (max-width: 1995px) {
+    .hero {
+        h1 {
+            font-size: 3em;
+        }
+        
+        p {
+            font-size: 1.2em;
+        }
+    }
+}
 
 @media (max-width: 768px) { 
-
+    
     .hero-text {
         font-size: 11px;
     }

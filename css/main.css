@@ -138,7 +138,6 @@ nav .navbar-toggler-icon {
 }
 
 .hero .hero-text {
-  text-align: center;
   top: 45%;
   left: 50%;
   margin: 50px 0;
@@ -173,7 +172,7 @@ nav .navbar-toggler-icon {
 
 .hero h1 {
   letter-spacing: 5px;
-  font-size: 5em;
+  font-size: 4em;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
 }
@@ -184,12 +183,20 @@ nav .navbar-toggler-icon {
 
 .hero p {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 1.5em;
-  font-weight: 400;
+  font-size: 1.3em;
 }
 
 .hero h1, .hero p {
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 1995px) {
+  .hero h1 {
+    font-size: 3em;
+  }
+  .hero p {
+    font-size: 1.2em;
+  }
 }
 
 @media (max-width: 768px) {
